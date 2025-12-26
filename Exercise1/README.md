@@ -111,12 +111,12 @@ In the `ecommerce` folder:
 
 Using SQL ([see the a list of supported SQL commands](https://www.postgresql.org/docs/current/sql-commands.html)), answer the following questions:
 
-**A.** What is the single item with the highest `price_per_unit`?
+**A.** What is the single item with the highest `price_per_category`?
 
 **B.** What are the top 3 products with the highest total quantity sold across all orders?
 
 **C.** What is the total revenue per product category?  
-(Revenue = `price_per_unit × quantity`)
+(Revenue = `price_per_category × quantity`)
 
 **D.** Which customers have the highest total spending?
 
