@@ -3,7 +3,8 @@
 *Lea Treml*
 
 ## Exercise 1
---
+
+```shell-console
 DROP TABLE IF EXISTS orders_big;
 
 CREATE TABLE orders_big (
@@ -18,8 +19,6 @@ CREATE TABLE orders_big (
 
 \COPY orders_big(customer_name,product_category,quantity,price_per_category,order_date,country)
 FROM '/ecommerce/orders_1M.csv' DELIMITER ',' CSV HEADER;
---
-did the command in ecommerce but moved it in data bc it's mounted
 
 A. What is the single item with the highest price_per_category?
 
@@ -72,7 +71,7 @@ SELECT customer_name, SUM(revenue) FROM (SELECT customer_name, (quantity * price
  Eve Young      | 933176.8600000003
  Ivy Rodriguez  | 925742.6400000004
 
----
+```
 
 ## Exercise 2
 *Why this query is bad to begin with*
