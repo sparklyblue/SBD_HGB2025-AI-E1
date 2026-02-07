@@ -44,6 +44,7 @@ ORDER BY match_count DESC
 See more about queries' syntax: https://docs.pinot.apache.org/users/user-guide-query
 
 What are we missing when we execute the queries?
+The data records
 
 See how to ingest data on Apache Pinot: https://docs.pinot.apache.org/manage-data/data-import
 
@@ -52,8 +53,6 @@ Inside the ```load-generator``` folder, understand the content of the docker com
 ```bash
 docker compose up -d
 ```
-
-What is the relation between these records being generated and Apache Pinot's table?
 
 
 Run again the advanced query:
@@ -66,21 +65,16 @@ GROUP BY source_ip
 ORDER BY match_count DESC    
 ```
 
-Are there any changes in query results? What and why?
-
-Moreover, what is the amount of data in the table?
 
 How this last query relates to the Spark Structured Streaming logs processing example from Exercise 3? 
 
-How performant is the advanced query? How long it takes to run and how many queries like this one could be served per second?
-
-Practical Exercise: From the material presented in the previous lecture on ``` Analytical Processing``` and Apache Pinot's features (available at https://docs.pinot.apache.org/ ), analyze and explain how the performance of the advanced query could be improved without demanding additional computing resources. Then, implement and demonstrate such an approach in Apache Pinot.
+Practical Exercise: From the material presented in the previous lecture on ``` Analytical Processing``` and Apache Pinot's features (available at https://docs.pinot.apache.org/ ), analyze and explain how the performance of the advanced query could be improved without demanding additional computing resources. Then, implement and demonstrate such an approach in Apache Pinot. What we did together in the exercise session is one of the most profitable solutions. Replicating it is acceptable, but also feel free to explore other alternatives.
 
 Foundational Exercise: Considering the material presented in the lecture ``` NoSQL - Data Processing & Advanced Topics``` and Apache Pinot's concepts https://docs.pinot.apache.org/basics/concepts and architecture https://docs.pinot.apache.org/basics/concepts/architecture, how an OLAP system such as Apache Pinot relates to NoSQL and realizes Sharding, Replication, and Distributed SQL?
 
 ## Expected Deliverables
 
-Complete answers to all questions above, including brief analyses, configuration files, and performance metrics for the practical exercise.
+Complete answers to the questions above, including brief analyses, configuration files, and performance metrics for the practical exercise.
 
 ## Clean up in the ```root folder``` and inside the ```load-generator``` folder. In both cases with the command:
 

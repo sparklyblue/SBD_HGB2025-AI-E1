@@ -1,13 +1,19 @@
 {
-  "tableName": "ingest_kafka",
+  "tableName": "ingest_kafka_fts",
   "tableType": "REALTIME",
   "segmentsConfig": {
     "timeType": "MILLISECONDS",
-    "schemaName": "ingest_kafka",
+    "schemaName": "ingest_kafka_fts",
     "timeColumnName": "timestamp",
     "replicasPerPartition": "1"
   },
-  
+  "fieldConfigList":[
+  {
+     "name":"content",
+     "encodingType":"RAW",
+     "indexTypes":["TEXT"]
+  }
+  ],
   "tenants": {},
   "tableIndexConfig": {
     "loadMode": "MMAP",
@@ -21,8 +27,12 @@
       "realtime.segment.flush.threshold.time": "24h",
       "realtime.segment.flush.threshold.segment.size": "50M",
       "stream.kafka.consumer.prop.auto.offset.reset": "smallest"
-    }
+    },
+    "noDictionaryColumns": [
+     "content"
+    ]
   },
+  
   "metadata": {
     "customConfigs": {}
   }
